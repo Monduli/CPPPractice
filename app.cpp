@@ -26,9 +26,11 @@ int main() {
     x = y = z = 50;
     cout << x + y + z << "\n";
 
-    //string input;
-    //cout << "Type something. \n";
-    //cin >> input;
-    //cout << "You typed: " << input;
+    string input;
+    cout << "Type something. \n";
+    cin >> input;
+    cout << "You typed: " << input;
+    // Note that typing something with a space causes it to only repeat back everything previous to the space
+    // I typed "bing bing" and it only returned "bing"
     return 0;
 }
