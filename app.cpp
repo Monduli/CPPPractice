@@ -72,6 +72,43 @@ int main() {
     } else if (choice == "2") {
         int time = 20;
         string result = (time < 18) ? "Good day." : "Good evening.";
+
+        // switch requires a break at the end of the case to end that line or it will continue
+        switch(time) {
+            case 20:
+                cout << "Time is equal to 20.\n";
+                break;
+            case 30:
+                cout << "Time is equal to 30.\n";
+                break;
+            default:
+                cout << "Time is not equal to 20 or 30.\n";
+                break;
+        }
+
+        int v = 0;
+
+        while(v != 5) {
+            cout << v << "\n";
+            v += 1;
+        }
+
+        // does the thing once, then does it more times if while statement still true
+        do {
+            cout << v << "\n";
+            v += 1;
+        }
+        while (v != 10);
+
+        for (int i = 0; i < 5; i++) {
+            cout << "I have run this loop " << i << " times.\n";
+        }
+
+        int myNumbers[5] = {10, 20, 30, 40, 50};
+        for (int i : myNumbers) {
+            cout << i << "\n";
+        }
+
     } else {
         cout << "You chose something other than '1' or '2'. Goodbye.\n";
     }
